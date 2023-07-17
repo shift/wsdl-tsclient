@@ -60,7 +60,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "sanitize-filename": "^1.6.3",
     "soap": "^1.0.0",
-    "supports-color": "^8.1.1",
+    "supports-color": "^9.4.0",
     "ts-morph": "^19.0.0",
     "yargs": "^16.2.0"
   }
