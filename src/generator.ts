@@ -15,11 +15,13 @@ import { Logger } from "./utils/logger";
 export interface GeneratorOptions {
     emitDefinitionsOnly: boolean;
     modelPropertyNaming: ModelPropertyNaming;
+    tsConfigFilePath: string;
 }
 
 const defaultOptions: GeneratorOptions = {
     emitDefinitionsOnly: false,
     modelPropertyNaming: null,
+    tsConfigFilePath: null,
 };
 
 /**
@@ -135,7 +137,10 @@ export async function generate(
         ...defaultOptions,
         ...options,
     };
-    const project = new Project();
+
+    const project = new Project({
+        tsConfigFilePath: options.tsConfigFilePath || null,
+    });
 
     const portsDir = path.join(outDir, "ports");
     const servicesDir = path.join(outDir, "services");
@@ -221,9 +226,8 @@ export async function generate(
                         },
                         {
                             name: "callback",
-                            type: `(err: any, result: ${
-                                method.returnDefinition ? method.returnDefinition.name : "unknown"
-                            }, rawResponse: any, soapHeader: any, rawRequest: any) => void`, // TODO: Use ts-morph to generate proper type
+                            type: `(err: any, result: ${method.returnDefinition ? method.returnDefinition.name : "unknown"
+                                }, rawResponse: any, soapHeader: any, rawRequest: any) => void`, // TODO: Use ts-morph to generate proper type
                         },
                     ],
                     returnType: "void",
@@ -300,9 +304,8 @@ export async function generate(
                             type: method.paramDefinition ? method.paramDefinition.name : "{}",
                         },
                     ],
-                    returnType: `Promise<[result: ${
-                        method.returnDefinition ? method.returnDefinition.name : "unknown"
-                    }, rawResponse: any, soapHeader: any, rawRequest: any]>`,
+                    returnType: `Promise<[result: ${method.returnDefinition ? method.returnDefinition.name : "unknown"
+                        }, rawResponse: any, soapHeader: any, rawRequest: any]>`,
                 })),
             },
         ]);

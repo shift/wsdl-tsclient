@@ -53,6 +53,11 @@ export interface Options {
      * @default true
      */
     colors: boolean;
+    /**
+     * tsconfig.json file path
+     * @default null
+     */
+    tsConfigFilePath: string;
 }
 
 export const defaultOptions: Options = {
@@ -62,6 +67,7 @@ export const defaultOptions: Options = {
     caseInsensitiveNames: false,
     maxRecursiveDefinitionName: 64,
     modelPropertyNaming: null,
+    tsConfigFilePath: null,
     //
     verbose: false,
     quiet: false,

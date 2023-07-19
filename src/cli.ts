@@ -23,6 +23,10 @@ const conf = yargs(process.argv.slice(2))
         type: "boolean",
         description: "Generate only Definitions",
     })
+    .option("tsConfigFilePath", {
+        type: "string",
+        description: "Your projects tsconfig to alter the output of the generated TypeScript",
+    })
     .option("modelNamePreffix", {
         type: "string",
         description: "Prefix for generated interface names",
