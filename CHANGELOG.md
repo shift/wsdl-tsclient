@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/shift/wsdl-tsclient/compare/v1.4.0...v1.5.0) (2023-07-19)
+
+
+### Features
+
+* Allow providing a tsconfig at generation time to control the output code ([b5cf8bb](https://github.com/shift/wsdl-tsclient/commit/b5cf8bbd6f2387ed7eededdab6df9f6a4be549a2))
+
+
+### Bug Fixes
+
+* **ci:** Hopefully fixes publishing. ([426d384](https://github.com/shift/wsdl-tsclient/commit/426d3844e0dda4cdd59c581fa3cba427adb059cc))
+* **deps:** update dependency soap to v1 ([9916af6](https://github.com/shift/wsdl-tsclient/commit/9916af635561878df2d0a642ffe8523e842934a8))
+* **deps:** update dependency ts-morph to v19 ([8b876db](https://github.com/shift/wsdl-tsclient/commit/8b876db0da5c85f543c0378aa07ed5cd3cea0c6d))
+* **deps:** update typescript-eslint monorepo to v6 ([8b82e70](https://github.com/shift/wsdl-tsclient/commit/8b82e705817e79a28a04ffad6d9bc22cc8c3d1e7))
+* Remove broken test temp. ([d48f4d6](https://github.com/shift/wsdl-tsclient/commit/d48f4d6ed80cb835abf9192547fd3b133a763c1c))
+
 ## [1.4.0] - 2022-04-27
 
 - Fix issue with self recursive WSDL types [#39](https://github.com/dderevjanik/wsdl-tsclient/pull/39) by @mtranter
