@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -24,8 +24,8 @@ dependencies:
     specifier: ^6.0.0
     version: 6.0.0(eslint@8.44.0)(supports-color@8.1.1)(typescript@5.1.6)
   camelcase:
-    specifier: ^6.3.0
-    version: 6.3.0
+    specifier: ^8.0.0
+    version: 8.0.0
   chalk:
     specifier: ^4.1.2
     version: 4.1.2
@@ -538,9 +538,9 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /camelcase@6.3.0:
-    resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
-    engines: {node: '>=10'}
+  /camelcase@8.0.0:
+    resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
+    engines: {node: '>=16'}
     dev: false
 
   /chalk@1.1.3:
