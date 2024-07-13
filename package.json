@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/dderevjanik/wsdl-tsclient#readme",
   "devDependencies": {
-    "prettier": "^2.8.8",
+    "prettier": "^3.3.3",
     "tap-spec": "^5.0.0",
     "tape": "^5.6.4",
     "ts-node": "^10.9.1",
